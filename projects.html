@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lakshmana Kontemukkula" />
+    <meta
+      name="description"
+      content="Selected software, IoT, and machine learning projects by Lakshmana Kontemukkula."
+    />
+    <meta name="theme-color" content="#f8fafc" />
+    <title>Projects | Lakshmana Kontemukkula</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
+  </head>
+  <body class="projects-page student-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="./index.html">Lakshmana K.</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link is-active" aria-current="page" href="./projects.html">Projects</a>
+          <a class="nav-link" href="./ai-lab.html">AI Lab</a>
+          <a class="button button-small" href="mailto:lakshmana.2003k@gmail.com">Email</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page-hero container">
+        <p class="intro-context">Coursework &amp; internship projects</p>
+        <h1>Project notes</h1>
+        <p>
+          What I worked on, the tools I used, and what came out of it. These notes include both
+          individual work and team projects.
+        </p>
+      </section>
+
+      <nav class="project-jump container" id="project-index" aria-label="Jump to a project">
+        <a href="#sea-water"><span>01</span> Industrial IoT ↘</a>
+        <a href="#jetson"><span>02</span> Edge vision ↘</a>
+        <a href="#student-system"><span>03</span> Web systems ↘</a>
+        <a href="#pneumonia"><span>04</span> Applied ML ↘</a>
+        <a href="#traffic-control"><span>05</span> Traffic Signal Control ↘</a
+        ><a href="#smart-water"><span>06</span> Smart Water Management ↘</a
+        ><a href="#food-quality"><span>07</span> Food Quality Monitoring ↘</a
+        ><a href="#project-recommender"><span>08</span> Internal Project Recommender ↘</a>
+      </nav>
+      <section class="case-study-list container" aria-label="Project case studies">
+        <article class="case-study" id="sea-water">
+          <div class="case-study-index">01</div>
+          <div class="case-study-copy">
+            <h2>Sea Water Purifier Monitoring</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>
+                  Read industrial equipment measurements and make them usable in a monitoring
+                  dashboard.
+                </dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Modbus ASCII, MOXA gateway, Python, Flask, MongoDB</dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  During my Tech Mahindra internship, I decoded Modbus ASCII frames, checked LRC
+                  values, and mapped registers from equipment connected through a MOXA gateway. I
+                  also helped present the measurements in a responsive dashboard.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  The dashboard supported real-time monitoring. My internship summary reports
+                  decoding more than 10,000 sensor packets daily. This work taught me to check the
+                  data before relying on what the interface displays.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+
+        <article class="case-study" id="jetson">
+          <div class="case-study-index">02</div>
+          <div class="case-study-copy">
+            <h2>Jetson Nano Vision System</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>
+                  Explore object detection and number-plate recognition on an embedded GPU platform.
+                </dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Jetson Nano, OpenCV, camera capture, CUDA-related checks</dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  I worked through camera capture, OpenCV setup, and hardware checks on the Jetson
+                  Nano. The work involved deployment constraints that I did not encounter when
+                  running vision code on a laptop.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  I explored the vision workflow on an edge device. Camera I/O, compatibility,
+                  latency, and networking were part of the work; I have not included an accuracy or
+                  speed benchmark here.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+
+        <article class="case-study" id="student-system">
+          <div class="case-study-index">03</div>
+          <div class="case-study-copy">
+            <h2>Student Management System</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>
+                  Build a browser application for creating, viewing, updating, and deleting student
+                  records.
+                </dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>JavaScript, Node.js, Express, MySQL, HTML/CSS</dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  I built an Express API with MySQL persistence, authentication, and a responsive
+                  interface. I extended the basic routes with protected operations and tested
+                  deployment.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  The result was a CRUD application that connected the interface, API, database, and
+                  authentication. Working through the complete flow helped me understand how those
+                  pieces affect each other.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+
+        <article class="case-study" id="pneumonia">
+          <div class="case-study-index">04</div>
+          <div class="case-study-copy">
+            <h2>Pneumonia Detection</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>
+                  Compare approaches to classifying chest X-ray images, including whether an
+                  ensemble improves the result.
+                </dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Convolutional neural networks, transfer learning, majority-vote ensemble</dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  I compared several CNN approaches and transfer-learning models, then evaluated a
+                  majority-vote ensemble against the individual architectures.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  The ensemble did not automatically outperform the strongest individual
+                  architecture. The useful lesson was to compare results carefully before adding
+                  more models.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+        <article class="case-study" id="traffic-control">
+          <div class="case-study-index">05</div>
+          <div class="case-study-copy">
+            <h2>Traffic Signal Control</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>
+                  Compare learned traffic-signal policies with a fixed-time policy in a simulated
+                  intersection.
+                </dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  Python, PyTorch; DQN, Double DQN, Dueling DQN, Q-Learning, SARSA, fixed-time
+                  baseline
+                </dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  In this two-author project, we built a custom intersection simulator and a shared
+                  evaluation harness for six policies. Initial learned policies underperformed. We
+                  revised the reward around queue length, added a minimum-green constraint, and
+                  included phase duration in the state.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  After the redesign, deep-RL agents reduced average waiting time by roughly 78%
+                  against the fixed-time baseline over 20 evaluation episodes while maintaining
+                  throughput. This was a simulator result, not a measured improvement on real roads.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+        <article class="case-study" id="smart-water">
+          <div class="case-study-index">06</div>
+          <div class="case-study-copy">
+            <h2>Smart Water Management</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>Make changes in water levels, usage, and quality visible remotely.</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>IoT sensors, Embedded C, connected mobile application</dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  I built a system that combined real-time water sensing with automated control and
+                  a mobile monitoring interface.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  The system supported remote monitoring and timely alerts. Its purpose was to help
+                  users respond to changing conditions and plan maintenance; no measured water
+                  savings are claimed here.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+        <article class="case-study" id="food-quality">
+          <div class="case-study-index">07</div>
+          <div class="case-study-copy">
+            <h2>Food Quality Monitoring</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>Track changing temperature and humidity in food-storage conditions.</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Temperature and humidity sensing, Embedded C, mobile notifications</dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  I designed and deployed a sensor-based monitoring system and configured mobile
+                  notifications for readings outside predefined thresholds.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  Users could receive alerts when storage conditions crossed the thresholds. These
+                  environmental measurements support monitoring; they do not establish whether food
+                  is safe to consume.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+        <article class="case-study" id="project-recommender">
+          <div class="case-study-index">08</div>
+          <div class="case-study-copy">
+            <h2>Internal Project Recommender</h2>
+            <dl class="project-notes">
+              <div>
+                <dt>Problem</dt>
+                <dd>
+                  Help colleagues find relevant internal projects across more than 300 documents.
+                </dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Python, Scikit-learn, Pinecone vector similarity search</dd>
+              </div>
+              <div>
+                <dt>My work</dt>
+                <dd>
+                  During my Tech Mahindra internship, I worked with a six-member cross-functional
+                  team on an NLP-based internal project recommender.
+                </dd>
+              </div>
+              <div>
+                <dt>Result &amp; notes</dt>
+                <dd>
+                  My résumé reports a 40% reduction in search time. This was team work on an
+                  internal application; the data and application are not available as a public demo.
+                </dd>
+              </div>
+            </dl>
+            <a class="back-to-index" href="#project-index">Back to project index ↑</a>
+          </div>
+        </article>
+      </section>
+
+      <p class="container lab-link">
+        For the assignment’s AI-assisted page, see <a href="./ai-lab.html">AI Lab: FocusFlow</a>.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Lakshmana Kontemukkula<span class="footer-note"
+            >Computer science student · Northeastern University</span
+          >
+        </p>
+        <p>
+          <span id="current-year"></span> · Boston, MA
+          <a class="footer-top" href="#main-content">Back to top ↑</a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lakshmana Kontemukkula" />
+    <meta
+      name="description"
+      content="FocusFlow: an interactive study planner with energy-based task suggestions and a focus timer. Built with AI assistance."
+    />
+    <meta name="theme-color" content="#f8fafc" />
+    <title>AI Lab | Lakshmana Kontemukkula</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/focusflow.css" />
+  </head>
+  <body class="lab-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="./index.html">Lakshmana K.</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./projects.html">Projects</a>
+          <a class="nav-link is-active" aria-current="page" href="./ai-lab.html">AI Lab</a>
+          <a class="button button-small" href="mailto:lakshmana.2003k@gmail.com">Email</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="container flow-intro">
+        <p class="eyebrow">AI Lab / Built with AI assistance</p>
+        <h1>Find your focus.<br /><span>Start with one task.</span></h1>
+        <p>
+          A little workspace for the work in front of you. Add your tasks, check your energy, and
+          give one thing your attention.
+        </p>
+        <p class="storage-note" id="storage-note">
+          Tasks stay in this browser. Nothing is sent to a server.
+        </p>
+      </section>
+      <noscript
+        ><p class="container">
+          Enable JavaScript to use the planner and timer. You can still explore the
+          <a href="./projects.html">project notes</a>.
+        </p></noscript
+      >
+      <div class="container flow-workspace" id="planner" hidden>
+        <section class="flow-board" aria-labelledby="board-title">
+          <div class="flow-heading">
+            <div>
+              <p class="eyebrow">01 / Make a little room</p>
+              <h2 id="board-title">Your task list</h2>
+            </div>
+            <span id="task-count" class="count-label">0 tasks</span>
+          </div>
+          <form id="task-form">
+            <label for="task-title">What do you want to work on?</label>
+            <input
+              id="task-title"
+              name="title"
+              maxlength="120"
+              required
+              placeholder="e.g. Finish my homepage demo"
+            />
+            <div class="form-row">
+              <div>
+                <label for="task-energy">Energy needed</label
+                ><select id="task-energy" name="energy">
+                  <option value="high">High · Deep work</option>
+                  <option value="medium">Steady · Quick win</option>
+                  <option value="low">Low · Light lift</option>
+                </select>
+              </div>
+              <div>
+                <label for="task-minutes">Minutes</label
+                ><input
+                  id="task-minutes"
+                  name="minutes"
+                  type="number"
+                  min="1"
+                  max="180"
+                  step="1"
+                  value="25"
+                  required
+                />
+              </div>
+              <button class="button" type="submit">Add task +</button>
+            </div>
+          </form>
+          <div class="list-heading">
+            <h3>On your list</h3>
+            <button class="quiet-button" id="clear-completed" type="button" disabled>
+              Clear completed
+            </button>
+          </div>
+          <p class="empty-note" id="empty-note" hidden>
+            Your list is clear. Add a task above to begin.
+          </p>
+          <ul class="task-list" id="task-list" aria-label="Study tasks"></ul>
+          <div class="completion-row">
+            <label for="task-progress" id="progress-label">0 of 0 tasks complete</label
+            ><progress id="task-progress" value="0" max="1">0</progress>
+          </div>
+        </section>
+        <div class="flow-sidebar">
+          <section class="energy-card" aria-labelledby="energy-title">
+            <p class="eyebrow">02 / Check in</p>
+            <h2 id="energy-title">How’s your energy?</h2>
+            <div class="energy-options" role="group" aria-labelledby="energy-title">
+              <button class="planner-energy" type="button" data-energy="high" aria-pressed="true">
+                High
+              </button>
+              <button
+                class="planner-energy"
+                type="button"
+                data-energy="medium"
+                aria-pressed="false"
+              >
+                Steady
+              </button>
+              <button class="planner-energy" type="button" data-energy="low" aria-pressed="false">
+                Low
+              </button>
+            </div>
+            <p class="recommendation-label">A good place to start</p>
+            <h3 id="recommendation-title">Choose a task</h3>
+            <p id="recommendation-reason"></p>
+            <button class="button" type="button" id="use-suggestion">Focus on this task</button>
+          </section>
+          <section class="timer-card" aria-labelledby="timer-title">
+            <p class="eyebrow">03 / One thing at a time</p>
+            <h2 id="timer-title">Focus session</h2>
+            <p id="session-task">Choose a task to begin.</p>
+            <p class="timer-display" id="timer-display" role="timer" aria-label="Time remaining">
+              25:00
+            </p>
+            <div class="timer-controls">
+              <button class="button" id="timer-toggle" type="button" disabled>Start</button
+              ><button class="quiet-button" id="timer-reset" type="button" disabled>Reset</button>
+            </div>
+            <button class="finish-button" id="finish-task" type="button" disabled>
+              Mark task complete ✓
+            </button>
+            <p class="timer-note">
+              Time’s up means take a breath. You decide when the task is done.
+            </p>
+          </section>
+        </div>
+        <p class="flow-status" id="flow-status" role="status" aria-live="polite"></p>
+      </div>
+      <section class="container flow-about" aria-labelledby="about-flow">
+        <h2 id="about-flow">A small experiment in studying better.</h2>
+        <p>
+          FocusFlow suggests your shortest unfinished task at the energy level you choose. If
+          there’s no match, it offers the shortest remaining task. You can always choose your own.
+        </p>
+        <p>
+          This page was designed and implemented with AI assistance. Suggestions use simple rules in
+          your browser, not a live AI service. Three example tasks are included on your first visit;
+          edit your list to make it yours.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Lakshmana Kontemukkula<span class="footer-note"
+            >Computer science student · Northeastern University</span
+          >
+        </p>
+        <p>
+          <span id="current-year"></span> · Boston, MA
+          <a class="footer-top" href="#main-content">Back to top ↑</a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/focusflow.js"></script>
+  </body>
+</html>

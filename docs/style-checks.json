@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "consistent computed theme, heading, buttons, nav and width across three pages",
+    "no images added to pages",
+    "no horizontal overflow at 1440/768/390/320",
+    "mobile menu and Escape on all pages",
+    "homepage filters and Spotlight",
+    "planner suggestion/timer/completion",
+    "no-JS navigation and planner fallback",
+    "no script errors"
+  ]
+}

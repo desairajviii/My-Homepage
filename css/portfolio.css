@@ -1,0 +1,227 @@
+/* Personal-page layouts; shared visual styles are in styles.css. */
+.intro > p {
+  max-width: 720px;
+}
+.intro-links,
+.section-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.intro-links a,
+.section-links a {
+  color: var(--accent);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.section-links {
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.87rem;
+}
+.student-page .section {
+  padding-block: 2.5rem;
+}
+.student-page .section-heading h2,
+.student-page .spotlight-controls h2,
+.student-page .contact-panel h2 {
+  font-size: 1.6rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+.student-page .project-explorer,
+.student-page .credentials-section {
+  background: transparent;
+  border: 0;
+}
+.student-page .filter-button:hover {
+  background: var(--soft);
+}
+.student-page .filter-button.is-active {
+  background: var(--accent);
+}
+.student-page .project-grid {
+  gap: 0 2.5rem;
+}
+.student-page .project-card {
+  padding: 1.3rem 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  transition: none;
+}
+.student-page .project-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+.student-page .project-tech span {
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.student-page .project-tech span + span::before {
+  content: " / ";
+}
+.student-page .project-card h3 {
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+.student-page .project-card p {
+  margin-bottom: 0.65rem;
+}
+.student-page .project-card .text-link {
+  border: 0;
+  padding-top: 0;
+  text-decoration: underline;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.student-page .spotlight-layout {
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2rem;
+  align-items: start;
+  padding-block: 1.5rem;
+  border-block: 1px solid var(--line);
+}
+.student-page .spotlight-card {
+  min-height: 220px;
+  padding: 1.2rem 1.5rem;
+  background: var(--soft);
+  border: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+.student-page .spotlight-card h3 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+.student-page .spotlight-card > p:last-child {
+  color: var(--muted);
+}
+.student-page .experience-item {
+  grid-template-columns: 1fr 1.6fr;
+  gap: 2rem;
+  padding-block: 1.5rem;
+}
+.student-page .experience-item h3,
+.student-page .credential-card h3 {
+  font-size: 1.1rem;
+  font-weight: 650;
+}
+.student-page .credential-card {
+  padding: 1rem 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+.student-page .skills-list > div {
+  border-color: var(--line);
+}
+.student-page .project-jump {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+  padding-bottom: 2rem;
+}
+.student-page .project-jump a {
+  flex-direction: row;
+  align-items: baseline;
+  padding-block: 0.75rem;
+  text-decoration: underline;
+  color: var(--accent);
+  border-color: var(--line);
+}
+.student-page .case-study-list {
+  gap: 0;
+}
+.student-page .case-study {
+  grid-template-columns: 2rem minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  padding: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+.student-page .case-study-index {
+  color: var(--muted);
+}
+.student-page .case-study h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 650;
+}
+.project-notes {
+  margin: 0;
+}
+.project-notes > div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+.project-notes dt {
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+.project-notes dd {
+  margin: 0;
+  max-width: 680px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.student-page .case-study-image {
+  border-radius: 0;
+}
+.back-to-index {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+.lab-link {
+  padding-block: 1.5rem 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+@media (max-width: 760px) {
+  .student-page .spotlight-layout,
+  .student-page .experience-item,
+  .student-page .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .student-page .nav-links {
+    border-radius: var(--radius);
+    box-shadow: none;
+  }
+  .intro {
+    padding-top: 2rem;
+  }
+  .student-page .spotlight-card {
+    min-height: 240px;
+  }
+}
+@media (max-width: 480px) {
+  .student-page .case-study,
+  .student-page .project-jump,
+  .project-notes > div {
+    grid-template-columns: 1fr;
+  }
+  .project-notes > div {
+    gap: 0.3rem;
+  }
+  .student-page .case-study {
+    gap: 0.6rem;
+  }
+  .student-page .case-study h2 {
+    font-size: 1.4rem;
+  }
+}

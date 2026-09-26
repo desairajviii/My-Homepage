@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "widths": [1440, 768, 390, 320],
+  "checks": [
+    "all pages load",
+    "no horizontal overflow",
+    "filters 4/4/3/8",
+    "Spotlight wraparound",
+    "mobile Escape and focus",
+    "all project anchors",
+    "expandable illustration",
+    "all energy recommendations",
+    "no-JS content and navigation",
+    "reduced motion",
+    "no page errors or failed resources"
+  ]
+}

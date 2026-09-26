@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": [
+    "add/remove/complete/clear tasks",
+    "energy match and shortest-task suggestion",
+    "saved tasks and energy after reload",
+    "timer start/pause/reset/finish",
+    "paused and running timer across reload",
+    "completion does not auto-check task",
+    "empty-list persistence",
+    "unsafe text rendering",
+    "blank-task validation",
+    "corrupt-storage recovery",
+    "blocked-storage fallback",
+    "no-JS explanation",
+    "no overflow at 1440/768/390/320",
+    "homepage filter and Spotlight regression",
+    "no page exceptions"
+  ]
+}

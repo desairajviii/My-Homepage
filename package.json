@@ -1,0 +1,21 @@
+{
+  "name": "lakshmana-homepage-assignment",
+  "version": "1.0.0",
+  "description": "Vanilla HTML5, CSS3, and ES6+ portfolio homepage for Northeastern Web Development.",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2"
+  },
+  "license": "MIT"
+}
