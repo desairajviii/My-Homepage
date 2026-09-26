@@ -83,8 +83,6 @@ homepage_assignment/
 │   └── web-system.png
 ├── docs/
 │   ├── design-document.md
-│   ├── validation-report.md
-│   ├── rubric-audit.md
 │   └── lakshmana-resume.pdf
 ├── .gitignore
 ├── .prettierignore
