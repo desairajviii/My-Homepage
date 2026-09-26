@@ -19,9 +19,7 @@ The goal of this project is to create a meaningful public homepage that introduc
 
 ## Live Site
 
-After GitHub Pages deployment, replace this with the public URL:
-
-`https://lakshmana2003k-afk.github.io/Homepage-Lakshmana/`
+`https://lakshmana2003k-afk.github.io/My-Homepage/`
 
 ## Screenshot
 
