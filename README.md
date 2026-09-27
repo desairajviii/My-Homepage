@@ -144,9 +144,10 @@ I used ChatGPT-5.6 Sol to get ideas. It helped me brainstorm the website structu
 
 Prompts included:
 
-- “Suggest an original JavaScript feature for my portfolio.”
+- “Suggest a JS feature for my portfolio.”
 - “Check whether my project satisfies this assignment rubric.”
 - “Give me an idea on how to improve the design of my portfolio homepage.”
+- " Give me a feature idea that I can include in my ai-lab page"
 
 The September 2026 redesign was also assisted by Codex: it simplified the first two pages, reorganized existing project claims into technical notes, and ran automated checks. This disclosure applies to the redesign as well as the earlier assistance. The third page, `ai-lab.html`, is the AI-assisted page required by the assignment.
 
