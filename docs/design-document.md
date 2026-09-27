@@ -193,17 +193,7 @@ The page describes AI assistance honestly; no AI inference service runs at runti
 - The original assignment constraints and project content remain in place; no achievements or performance metrics were invented.
 - Screenshots and automated results are recorded in `validation-report.md`. Human review and assistive-technology testing remain valuable before submission.
 
-## 11. Additional user stories and acceptance criteria
-
-| Visitor story                                                                                               | Acceptance criteria                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| As a recruiter, I want to review education and internships so I can understand the candidate's preparation. | Two education entries and three dated internships are visible on the homepage.                                           |
-| As a recruiter, I want a résumé and contact links so I can follow up.                                       | Résumé download, email, and LinkedIn are reachable with the keyboard.                                                    |
-| As an ML collaborator, I want the traffic-control result in context so I can understand its limits.         | The case study names the two-author team, six policies, 20 evaluation episodes, and simulation scope.                    |
-| As a keyboard user, I want predictable controls so I can explore without a mouse.                           | Filters announce their selected state; the mobile menu closes with Escape and returns focus.                             |
-| As an instructor, I want evidence for each rubric item so I can review the submission efficiently.          | README links to the design document, validation report, and rubric audit; unfinished external requirements are explicit. |
-
-## 12. Content provenance
+## 11. Content provenance
 
 Education, internship dates, skills, the additional four projects, and updated contact links
 come from the résumé supplied on September 25. The résumé PDF is included unchanged.
@@ -212,7 +202,7 @@ in the newer résumé. Portfolio illustrations are conceptual diagrams, not scre
 those projects. Grades are shown as supplied, without inventing grading scales. The master's
 completion date is explicitly marked expected. The student must verify all personal claims.
 
-## 13. FocusFlow behavior and acceptance criteria
+## 12. FocusFlow behavior and acceptance criteria
 
 - Add a named task with an energy level and a whole-minute duration from 1 to 180; reject blank names.
 - Complete, reopen, or remove tasks; clear completed tasks; show progress from actual task counts.
@@ -226,6 +216,3 @@ completion date is explicitly marked expected. The student must verify all perso
 - This is local browser storage, not account storage or device synchronization. A closed browser
   cannot notify the user; elapsed timer completion is recognized when the page opens again.
 
-## 14. Shared appearance update
-
-The latest request unified the appearance of all three pages without adding pictures or changing functionality. All JavaScript files are byte-for-byte unchanged from the working FocusFlow version. Navigation, footers, content widths, heading scales, blue-gray colors, and button shapes match across pages. Desktop and mobile screenshots were refreshed.
