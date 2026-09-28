@@ -111,29 +111,6 @@ if (spotlightButton && spotlightTitle && spotlightText) {
   });
 }
 
-// A small, deterministic prototype: match sample tasks to the visitor's energy.
-const energyButtons = document.querySelectorAll(".energy-button");
-const energyPanels = document.querySelectorAll("[data-task-energy]");
-const energySummary = document.querySelector(".energy-summary");
-
-energyButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    energyButtons.forEach((item) => {
-      const isSelected = item === button;
-      item.classList.toggle("is-active", isSelected);
-      item.setAttribute("aria-pressed", String(isSelected));
-    });
-    energyPanels.forEach((panel) => {
-      const isRecommended = panel.dataset.taskEnergy === button.dataset.energy;
-      panel.classList.toggle("is-recommended", isRecommended);
-      if (isRecommended && energySummary) {
-        const title = panel.querySelector("h3").textContent;
-        energySummary.textContent = `${button.textContent.trim()}: start with ${title}.`;
-      }
-    });
-  });
-});
-
 const revealItems = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
