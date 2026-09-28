@@ -160,8 +160,6 @@ Tasks and timer state are saved in localStorage for this browser and site origin
 ## Design and rubric evidence
 
 - [Design document: personas, user stories, layouts, and decisions](./docs/design-document.md)
-- [Validation report](./docs/validation-report.md)
-- [Requirement audit and remaining submission items](./docs/rubric-audit.md)
 
 ## Deployment
 
