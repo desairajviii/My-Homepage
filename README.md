@@ -176,11 +176,7 @@ Recommended: GitHub Pages.
 
 ## Video Demo
 
-Record a short public or unlisted narrated video demonstrating the homepage, Project Explorer, responsive layout, Projects page, and AI-assisted third page.
-
-Replace this before submission:
-
-`PASTE_PUBLIC_VIDEO_URL_HERE`
+`https://youtu.be/qMErvfUQIEs`
 
 ## License
 
